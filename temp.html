@@ -1,0 +1,11 @@
+<script>
+    const data = {key : "value"};
+    const json = JSON.stringify(data);
+    
+    //alert(data); //객체 데이터는 보여줄 수 없다 문자열만 출력 가능
+    localStorage.setItem("test", json);    
+
+    const newJson = localStorage.getItem("test");
+    const newData = JSON.parse(newJson);
+    alert(newData.key);
+</script>
